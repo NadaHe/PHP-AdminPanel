@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow sticky-top ">
     <div class="container">
         <a class="navbar-brand" href="index.php">PHP E-commerce</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,6 +12,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="categories.php">Categories</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cart.php">Cart</a>
+                </li>
                 <?php
                 if (isset($_SESSION['auth'])) {
                 ?>
@@ -21,7 +24,7 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="admin\index.php">Dashboard</a></li>
                             <li><a class="dropdown-item" href="logout.php">Log out</a></li>
                         </ul>
                     </li>

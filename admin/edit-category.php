@@ -6,21 +6,6 @@ include('includes/header.php');
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <div class="bg-success">
-                <?php
-                if (isset($_SESSION['message'])) {
-                ?>
-
-                    <div class="alert alert-dismissible fade show bg-success" role="alert">
-                        <strong>Hey!</strong> <?= $_SESSION['message'] ?>
-                        <button type="button" class="btn-close bg-dark" data-bs-dismiss="alert" aria-label="Close"></button>
-                    </div>
-
-                <?php
-                    unset($_SESSION['message']);
-                }
-                ?>
-            </div>
 
             <?php
             if (isset($_GET['id'])) {
@@ -39,7 +24,7 @@ include('includes/header.php');
                             <form action="code.php" method="POST" enctype="multipart/form-data">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <input type="hidden" name="category_id"value="<?= $data['id'] ?>" >
+                                        <input type="hidden" name="category_id" value="<?= $data['id'] ?>">
                                         <label for="">Name</label>
                                         <input type="text" name="name" value="<?= $data['name'] ?>" class="form-control" placeholder="Enter name" required>
                                     </div>
@@ -76,7 +61,7 @@ include('includes/header.php');
                                     </div>
                                     <div class="col-md-6">
                                         <label for="">popular</label>
-                                        <input type="checkbox"  <?= $data['popular'] ? "checked" : "" ?> name="popular">
+                                        <input type="checkbox" <?= $data['popular'] ? "checked" : "" ?> name="popular">
                                     </div>
                                     <div class="col-md-12">
                                         <button type="submit" class="btn btn-primary mt-3" name="update_category_btn">Update Category</button>
