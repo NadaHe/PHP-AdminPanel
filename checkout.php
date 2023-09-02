@@ -26,7 +26,7 @@ include('authenticate.php')
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="fw-bold">E-mail</label>
-                                    <input type="text" name="email" placeholder="Enter your e-mail" class="form-control">
+                                    <input type="email" name="email" placeholder="Enter your e-mail" class="form-control">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="fw-bold">Phone</label>
@@ -71,6 +71,7 @@ include('authenticate.php')
                             ?>
                             <hr>
                             <h5>Total price:<span class="float-end fw-bold"><?= $totalPrice ?></span></h5>
+                            <input type="hidden" name="payment_mode" value="COD">
                             <button type="submit" name="placeOrderBtn" class="btn btn-primary">Confirm and place order | COD</button>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 <?php 
 session_start();
 include('includes/header.php'); 
+include('includes/slider.php');
 ?>
 
 <!-- <py-5></py-5> -->
@@ -31,7 +32,7 @@ include('includes/header.php');
 <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="2000">
-      <img src="./images/ElecTool (3).png" class="d-block w-100" alt="...">
+      <img src="./images/شطب شقتك في أسرع وقت.png" height="600px" class="d-block w-100" alt="...">
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="./images/ElecTool (1) (1).png" class="d-block w-100" alt="...">

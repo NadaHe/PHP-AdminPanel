@@ -44,9 +44,25 @@ function getCartItems()
     return $query_run;
 }
 
+function getOrders()
+{
+    global $con;
+    $userId = $_SESSION['auth_user']['user_id'];
+
+    $query = "SELECT * FROM orders WHERE user_id='$userId' ORDER BY id DESC";
+    return  mysqli_query($con, $query);
+}
+
 function redirect($url, $message)
 {
     $_SESSION['message'] = $message;
     header('Location: ' . $url);
     exit();
+}
+
+function checkTrackingNoValid($trackingNo){
+    global $con;
+    $userId = $_SESSION['auth_user']['user_id'];
+    $query = "SELECT * FROM orders WHERE tracking_no='$trackingNo' AND user_id='$userId' ";
+    return  mysqli_query($con, $query);
 }

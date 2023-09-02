@@ -1,6 +1,10 @@
-*{
-    font-family: 'Noto Kufi Arabic', sans-serif;
+* {
+  font-family: "Noto Kufi Arabic", sans-serif;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
+}
+.navbar {
+  /* color: $yellow-300; */
+  /* background-color: $indigo-900; */
 }
