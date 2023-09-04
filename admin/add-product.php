@@ -21,7 +21,7 @@ include('includes/header.php');
             ?>
 
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-primary">
                     <h4>add Product</h4>
                 </div>
                 <div class="card-body">

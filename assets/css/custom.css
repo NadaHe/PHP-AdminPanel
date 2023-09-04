@@ -5,6 +5,19 @@ a {
   text-decoration: none;
 }
 .navbar {
-  /* color: $yellow-300; */
-  /* background-color: $indigo-900; */
+  color: #fff;
+  background-color: #000;
+}
+.underline {
+    height: 5px;
+    width: 150px;
+    background-color: rgb(184, 60, 60);
+    border-radius: 20px;
+}
+.bg-f2f2f2{
+    background-color: #f2f2f2;
+}
+
+.bgblue{
+    background-color: #e4968c;
 }

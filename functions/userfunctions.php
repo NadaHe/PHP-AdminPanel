@@ -10,6 +10,14 @@ function getAllActive($table)
     return $query_run;
 }
 
+function getAllTrending()
+{
+    global $con;
+    $query = "SELECT * FROM products where trending = '1' ";
+    $query_run = mysqli_query($con, $query);
+    return $query_run;
+}
+
 function getSlugActive($table, $slug)
 {
     global $con;

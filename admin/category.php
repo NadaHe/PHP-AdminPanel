@@ -22,7 +22,7 @@ include('includes/header.php');
                 ?>
             </div>
             <div class="card">
-                <div class="card-header">
+                <div class="card-header  bg-primary">
                     <h4>Categories</h4>
                 </div>
                 <div class="card-body" id="category_table">

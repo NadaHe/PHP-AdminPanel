@@ -32,7 +32,7 @@ include('includes/header.php');
                 <!-- ////////////////////////////////////////////////////////////     -->
 
                 <div class="card">
-                    <div class="card-header bg-primary">
+                    <div class="card-header bg-light">
                         <h4>Login form</h4>
                     </div>
                     <div class="card-body">
