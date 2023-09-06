@@ -7,28 +7,28 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                    <a class="text-white nav-link active" aria-current="page" href="index.php">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="categories.php">Categories</a>
+                    <a class=" text-white nav-link" href="categories.php">Categories</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="cart.php">Cart</a>
+                    <a class="text-white nav-link" href="cart.php">Cart</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact-us.php">Contact us</a>
+                    <a class="text-white nav-link" href="contact-us.php">Contact us</a>
                 </li>
                 <?php
                 if (isset($_SESSION['auth'])) {
                 ?>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="text-white nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <?= $_SESSION['auth_user']['name']; ?>
                         </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="my_orders.php">MyOrders</a></li>
-                            <li><a class="dropdown-item" href="admin\index.php">Dashboard</a></li>
-                            <li><a class="dropdown-item" href="logout.php">Log out</a></li>
+                        <ul class="dropdown-menu bg-danger ">
+                            <li><a class="text-white dropdown-item" href="my_orders.php">MyOrders</a></li>
+                            <li><a class="text-white dropdown-item" href="admin\index.php">Dashboard</a></li>
+                            <li><a class="text-white dropdown-item" href="logout.php">Log out</a></li>
                         </ul>
                     </li>
                 <?php
@@ -37,10 +37,10 @@
                 {
                 ?>
                 <li class="nav-item">
-                    <a class="nav-link" href="register.php">Register</a>
+                    <a class="text-white nav-link" href="register.php">Register</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.php">Login</a>
+                    <a class="text-white nav-link" href="login.php">Login</a>
                 </li>
 
                 <?php

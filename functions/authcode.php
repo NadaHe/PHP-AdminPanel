@@ -42,6 +42,7 @@ if (isset($_POST['register_btn']))  // when the button is clicked
 } else if (isset($_POST['login_btn'])) {
     $email = mysqli_real_escape_string($con, $_POST['email']);
     $password = mysqli_real_escape_string($con, $_POST['password']);
+    $response = $_POST['g-recaptcha-response'];
 
     $login_query = "SELECT * FROM users WHERE email='$email' AND password='$password' ";
     $login_query_run = mysqli_query($con, $login_query);
@@ -56,7 +57,7 @@ if (isset($_POST['register_btn']))  // when the button is clicked
         $role_as = $userdata['role_as'];
 
         $_SESSION['auth_user'] = [
-            'user_id'=> $userid,
+            'user_id' => $userid,
             'name' => $username,
             'email' => $useremail
         ];
@@ -66,11 +67,42 @@ if (isset($_POST['register_btn']))  // when the button is clicked
         if ($role_as == 1)  //admin
         {
             redirect('../admin/index.php', "Welcome to dashboard");
-        } else 
-        {
+        } else {
             redirect('../index.php', "Logged in Successfully");
         }
+    } else if ($email == "" || $password == "") {
+        redirect('../login.php', "please fill all the fields");
     } else {
         redirect('../login.php', "Email or Password is incorrect");
+    }
+} else if (isset($_POST['contact-btn'])) {
+    $name = mysqli_real_escape_string($con, $_POST['name']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $phone = mysqli_real_escape_string($con, $_POST['phone']);
+    $city = mysqli_real_escape_string($con, $_POST['city']);
+    $file = $_FILES["file"]['name'];
+
+
+    // header("Location: contact-us.php");
+
+
+    // $image = $_FILES['image']['name'];
+
+    $path = "../uploads";
+
+    $file_ext = pathinfo($file, PATHINFO_EXTENSION);
+    $filename = time() . '.' . $file_ext;
+
+    $contact_query = "INSERT into contact(name,email,phone,city,file)
+     values('$name','$email','$phone','$city','$file')";
+
+    $contact_query_run = mysqli_query($con, $contact_query);
+
+    if ($contact_query_run) {
+        move_uploaded_file($_FILES['file']['tmp_name'], $path . '/' . $filename);
+        // move_uploaded_file($file["tmp_name"], "uploads/" . $file["name"]);
+        redirect("contact-us.php", "Message added successfully");
+    } else {
+        redirect("contact-us.php", "Something went wrong");
     }
 }

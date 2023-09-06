@@ -17,6 +17,13 @@ function getAllTrending()
     $query_run = mysqli_query($con, $query);
     return $query_run;
 }
+function getCategoryById($category_id)
+{
+    global $con;
+    $query = "SELECT * FROM categories where id = '$category_id' ";
+    $query_run = mysqli_query($con, $query);
+    return $query_run;
+}
 
 function getSlugActive($table, $slug)
 {

@@ -1,8 +1,7 @@
 <?php
 session_start();
 
-if(isset($_SESSION['auth']))
-{
+if (isset($_SESSION['auth'])) {
     $_SESSION['message'] = "you are already logged in";
     header('Location: index.php');
     exit();
@@ -33,22 +32,33 @@ include('includes/header.php');
 
                 <div class="card">
                     <div class="card-header bg-light">
-                        <h4>Login form</h4>
+                        <h4>تسجيل الدخول</h4>
                     </div>
                     <div class="card-body">
                         <form action="./functions/authcode.php" method="POST">
 
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" name="email" class="form-control" placeholder="Enter your Email" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <label for="exampleInputEmail1" class="form-label">البريد الإلكترونى</label>
+                                <input type="email" name="email" class="form-control" placeholder="ادخل البريد الإلكترونى" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
 
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Enter your Password">
+                                <label for="exampleInputPassword1" class="form-label">الباسورد</label>
+                                <input type="password" name="password" class="form-control" placeholder="ادخل الرقم السري" id="exampleInputPassword1" >
+                            </div>
+                            <br>
+
+                            <div class="form-group">
+                                <div class="g-recaptcha" data-sitekey="6LdaPvsnAAAAAArrmN0xGVzLSZJyck-Q3UxHqtE_"></div>
                             </div>
 
-                            <button type="submit" name="login_btn" class="btn btn-primary">Login</button>
+                            <br>
+
+                            <div>
+                                <p>ليس لديك حساب ؟ يمكنك إنشاء حساب جديد  <a href="register.php">من هنا</a> </p>
+                            </div>
+
+                            <button type="submit" id="login" name="login_btn" class="btn btn-primary mt-3">دخول</button>
                         </form>
                     </div>
                 </div>
@@ -59,3 +69,14 @@ include('includes/header.php');
 </div>
 
 <?php include('includes/footer.php'); ?>
+
+<script>
+  $(document).on('click','#login',function(){
+    var response = grecaptcha.getResponse();
+    if(response.length==0)
+    {
+      alertify.error('Please verify captcha');
+      return false;
+    }
+  });
+</script>

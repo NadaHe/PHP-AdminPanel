@@ -27,34 +27,30 @@ include('includes/header.php');
                 </div>
             </div>
             <div class="col-md-8 p-5">
-                <h2>Get in touch</h2>
-                <form class="row g-3 contactForm mt-4" method="POST" enctype="multipart/form-data" action="uploadPDF.php">
-                    <div class="col-md-6">
-                      <label for="inputEmail4" class="form-label">First Name</label>
-                      <input type="text" class="form-control" id="inputEmail4" required>
-                    </div>
-                    <div class="col-md-6">
-                      <label for="inputPassword4" class="form-label">Last Name</label>
-                      <input type="text" class="form-control" id="inputPassword4" required>
+                <h2>اتصل بنا</h2>
+                <form class="row g-3 contactForm mt-4" method="POST" enctype="multipart/form-data" action="./functions/authcode.php">
+                    <div class="col-md-12">
+                      <label for="inputEmail4" class="form-label">الاسم</label>
+                      <input type="text" name="name" class="form-control" id="inputEmail4" required>
                     </div>
                     <div class="col-12">
-                      <label for="inputAddress" class="form-label">Attachment</label>
+                      <label for="inputAddress" class="form-label">ارفق ملف</label>
                       <input type="file" name="file" class="form-control" id="inputAddress" required>
                     </div>
                     <div class="col-12">
-                        <label for="inputAddress" class="form-label">Email Id</label>
-                        <input type="email" class="form-control" id="inputAddress" required>
+                        <label for="inputAddress" class="form-label">البريد الالكترونى </label>
+                        <input type="email" name="email" class="form-control" id="inputAddress" required>
                       </div>
                     <div class="col-md-6">
-                      <label for="inputCity" class="form-label">City</label>
-                      <input type="text" class="form-control" id="inputCity">
+                      <label for="inputCity" class="form-label">المنطقة</label>
+                      <input type="text" name="city" class="form-control" id="inputCity">
                     </div>
                     <div class="col-md-6">
-                        <label for="inputCity" class="form-label">Contact Number</label>
-                        <input type="text" class="form-control" id="inputCity" required>
+                        <label for="inputCity" class="form-label">رقم الهاتف</label>
+                        <input type="text" name="phone" class="form-control" id="inputCity" required>
                       </div>
                     <div class="col-12 float-start">
-                      <button type="submit" class="btn btn-danger mt-3">Sign in</button>
+                      <button type="submit" name="contact-btn" class="btn btn-danger mt-3">إرسال</button>
                     </div>
                   </form>
             </div>
