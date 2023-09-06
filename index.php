@@ -72,6 +72,12 @@ include('includes/slider.php');
   </div>
 </div>
 
+<div class=" text-center">
+  <img src="images/MyProject (1).png" width="1500px" height="400px" class="img-fluid" alt="..." >
+</div>
+
+<!-- <i data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="slide-out-right" class="fas fa-car-side fa-3x"></i> -->
+
 <div class="py-5">
   <div class="container">
     <div class="row">

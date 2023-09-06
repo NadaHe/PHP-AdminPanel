@@ -20,33 +20,25 @@ include('includes/header.php');
                         <li class="breadcrumb-item active" aria-current="page">Categories</li>
                     </ol>
                 </nav>
-                <h1>Our Categories</h1>
-                <hr>
+                <h2>التصنيفات</h2>
+                <div class="underline mb-4"></div>
                 <div class="row">
                     <?php
                     $categories = getAllActive("categories");
                     if (mysqli_num_rows($categories) > 0) {
                         foreach ($categories as $item) {
                     ?>
-
-                            <!-- <div class="card me-4 shadow" style="width: 18rem;" data-mdb-toggle="animation" data-mdb-animation="zoom-in">
-                                <img src="uploads/<?= $item['image']; ?>" alt="<?= $item['name']; ?>" class="card-img-top">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title text-center"><?= $item['name']; ?></h5>
-                                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                    <a href="#" class="btn btn-primary">تسوق</a>
-                                </div>
-                            </div> -->
                             <div class="col-md-3 mb-2">
-                                <a href="products.php?category=<?= $item['slug'];?>">
-                                    <div class="card shadow">
-                                        <div class="card-body">
-                                            <img src="uploads/<?= $item['image']; ?>" alt="<?= $item['name']; ?>" width="100%" height="200px" class="w-100">
-                                            <h4 class="text-center"><?= $item['name']; ?></h4>
+                                <a href="products.php?category=<?= $item['slug']; ?>">
+                                    <div class="card shadow" style=" width: 16rem;">
+                                        <img src="uploads/<?= $item['image']; ?>" alt="<?= $item['name']; ?>" class="card-img-top" width="100%" height="200px" class="w-100">
+                                        <div class="card-body text-center">
+                                            <h6 class="text-danger text-center card-title "><?= $item['name']; ?></h6>
                                         </div>
                                     </div>
                                 </a>
                             </div>
+
                     <?php
                         }
                     } else {

@@ -225,6 +225,32 @@ else if(isset($_POST['update_order_btn']))
     
     redirect("view-order.php? t=$track_no","Order status updated successfully");
 }
+else if (isset($_POST['delete_Message_btn'])) {
+
+    // id = contact_id
+
+    $id = mysqli_real_escape_string($con, $_POST['id']);
+
+    $contact_query = "SELECT * from contact where id='$id'";
+    $contact_query_run = mysqli_query($con, $contact_query);
+
+    $contact_data = mysqli_fetch_array($contact_query_run);
+    $file = $contact_data['file'];
+
+    $delete_query = "DELETE from contact where id= '$id'";
+    $delete_query_run = mysqli_query($con, $delete_query);
+
+    if ($delete_query_run) {
+        if (file_exists("../uploaded_files/" . $file)) {
+            unlink("../uploaded_files/" . $file);
+        }
+        // redirect("category.php", "Category deleted successfully");
+        echo 200;
+    } else {
+        // redirect("category.php", "Something went wrong");
+        echo 500;
+    }
+} 
 else {
     header("Location:../index.php");
 }

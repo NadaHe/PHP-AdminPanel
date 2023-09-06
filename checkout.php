@@ -1,7 +1,7 @@
 <?php
 include('functions/userfunctions.php');  // to get the access for database
 include('includes/header.php');
-include('authenticate.php')
+include('authenticate.php');
 ?>
 
 <div class="py-5">
@@ -22,7 +22,7 @@ include('authenticate.php')
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label class="fw-bold">Name</label>
-                                    <input type="text" name="name" placeholder="Enter your full name" class="form-control">
+                                    <input type="text" name="name" value="<?php if(isset($_POST["name"])){echo $_POST["name"];} ?>" placeholder="Enter your full name" class="form-control">
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label class="fw-bold">E-mail</label>

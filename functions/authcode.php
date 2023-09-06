@@ -82,27 +82,20 @@ if (isset($_POST['register_btn']))  // when the button is clicked
     $city = mysqli_real_escape_string($con, $_POST['city']);
     $file = $_FILES["file"]['name'];
 
-
-    // header("Location: contact-us.php");
-
-
-    // $image = $_FILES['image']['name'];
-
-    $path = "../uploads";
+    $path = "../uploaded_files";
 
     $file_ext = pathinfo($file, PATHINFO_EXTENSION);
     $filename = time() . '.' . $file_ext;
 
     $contact_query = "INSERT into contact(name,email,phone,city,file)
-     values('$name','$email','$phone','$city','$file')";
+     values('$name','$email','$phone','$city','$filename')";
 
     $contact_query_run = mysqli_query($con, $contact_query);
 
     if ($contact_query_run) {
         move_uploaded_file($_FILES['file']['tmp_name'], $path . '/' . $filename);
-        // move_uploaded_file($file["tmp_name"], "uploads/" . $file["name"]);
-        redirect("contact-us.php", "Message added successfully");
+        redirect("../contact-us.php", "Message sent successfully");
     } else {
-        redirect("contact-us.php", "Something went wrong");
+        redirect("../contact-us.php", "Something went wrong");
     }
 }
