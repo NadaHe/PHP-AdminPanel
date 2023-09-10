@@ -26,6 +26,9 @@ a {
 
 /* ======================================================= */
 
+.bot{
+    background-color: #e59c80;
+}
 .nav-link:hover {
   color: #4d2e2a !important;
   font-weight: bold;

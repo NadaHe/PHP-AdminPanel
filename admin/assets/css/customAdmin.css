@@ -1,0 +1,8 @@
+.sidebarcolor{
+background-color: rgb(168, 40, 40);
+}
+
+.selected{
+    background-color: rgb(5, 17, 68);
+    color: white;
+}

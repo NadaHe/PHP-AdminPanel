@@ -1,4 +1,4 @@
-<?php 
+<?php
 session_start();
 include('../middleware/adminMiddleware.php');
 ?>
@@ -26,16 +26,18 @@ include('../middleware/adminMiddleware.php');
     <!-- CSS Files -->
     <link id="pagestyle" href="assets/css/material-dashboard.min.css" rel="stylesheet" />
     <!-- Alertify js -->
-    <link  href="assets/Alertify js/css/alertify.min.css" rel="stylesheet"/>
+    <link href="assets/Alertify js/css/alertify.min.css" rel="stylesheet" />
     <!-- Bootstrap theme -->
-    <link  href="assets/Alertify js/css/themes/bootstrap.min.css" rel="stylesheet"/>
+    <link href="assets/Alertify js/css/themes/bootstrap.min.css" rel="stylesheet" />
 
+    <link href="assets/css/customAdmin.css" rel="stylesheet" />
     <style>
         .form-control {
             border: 1px solid #b3a1a1 !important;
             padding: 8px 10px;
         }
-        .form-select{
+
+        .form-select {
             border: 1px solid #b3a1a1 !important;
             padding: 8px 10px;
         }

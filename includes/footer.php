@@ -54,7 +54,7 @@
 <script src="https://kit.fontawesome.com/b6954da99b.js" crossorigin="anonymous"></script>
 
 <script>
-  alertify.set('notifier', 'position', 'top-center');
+  alertify.set('notifier', 'position', 'top-right');
   <?php
   if (isset($_SESSION['message'])) {
   ?>

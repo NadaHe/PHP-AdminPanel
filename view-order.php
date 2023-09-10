@@ -28,54 +28,54 @@ $data = mysqli_fetch_array($orderData);
                 <div class="col-md-12">
                     <nav style="--bs-breadcrumb-divider-flipped: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-                            <li class="breadcrumb-item"><a href="my_orders.php">My Orders</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">View Order Details</li>
+                            <li class="breadcrumb-item"><a href="index.php">الرئيسية</a></li>
+                            <li class="breadcrumb-item"><a href="my_orders.php">الاوردرات</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">عرض تفاصيل</li>
                         </ol>
                     </nav>
                     <div class="card">
-                        <div class="card-header bg-primary">
-                            <span class="text-white fs-4"> View Order</span>
-                            <a href="my_orders.php" class="btn btn-warning float-end"><i class="fa fa-reply"></i> Back</a>
+                        <div class="card-header bot">
+                            <span class="text-white fs-4"> عرض تفاصيل الاوردر</span>
+                            <a href="my_orders.php" class="btn btn-danger float-end"><i class="fa fa-reply"></i> Back</a>
                         </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-6">
-                                    <h4>Delivery Details</h4>
-                                    <hr>
+                                    <h4 class="text-danger">بيانات المستلم</h4>
+                                    <div class="underline mb-4"></div>
                                     <div class="row">
                                         <div class="col-md-12 mb-3">
-                                            <label class="fw-bold">Name</label>
+                                            <label class="fw-bold">الاسم</label>
                                             <div class="border p-1">
                                                 <?= $data['name'] ?>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
-                                            <label class="fw-bold">E-mail</label>
+                                            <label class="fw-bold">البريد الالكترونى</label>
                                             <div class="border p-1">
                                                 <?= $data['email'] ?>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
-                                            <label class="fw-bold">Phone</label>
+                                            <label class="fw-bold">رقم الهاتف</label>
                                             <div class="border p-1">
                                                 <?= $data['phone'] ?>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
-                                            <label class="fw-bold">Tracking No.</label>
+                                            <label class="fw-bold">رقم الشحنة</label>
                                             <div class="border p-1">
                                                 <?= $data['tracking_no'] ?>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
-                                            <label class="fw-bold">Address</label>
+                                            <label class="fw-bold">العنوان</label>
                                             <div class="border p-1">
                                                 <?= $data['address'] ?>
                                             </div>
                                         </div>
                                         <div class="col-md-12 mb-3">
-                                            <label class="fw-bold">Pin code</label>
+                                            <label class="fw-bold">الرقم البريدى</label>
                                             <div class="border p-1">
                                                 <?= $data['pincode'] ?>
                                             </div>
@@ -83,14 +83,14 @@ $data = mysqli_fetch_array($orderData);
                                     </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <h4>Order Details</h4>
-                                    <hr>
+                                    <h4 class="text-danger">تفاصيل الاوردر</h4>
+                                    <div class="underline mb-4"></div>
                                     <table class="table">
                                         <thead>
                                             <tr>
-                                                <th>Product</th>
-                                                <th>Price</th>
-                                                <th>Quantity</th>
+                                                <th>المنتج</th>
+                                                <th>السعر</th>
+                                                <th>الكمية</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -109,7 +109,7 @@ $data = mysqli_fetch_array($orderData);
                                                             <img src="uploads/<?= $item['image']; ?>" width="50px" height="50px" alt="<?= $item['name']; ?>">
                                                         </td>
                                                         <td class="align-middle">
-                                                            <?= $item['price']; ?>
+                                                            <?= $item['price']; ?> جم
                                                         </td>
                                                         <td class="align-middle">
                                                             <?= $item['orderqty']; ?>
@@ -122,10 +122,10 @@ $data = mysqli_fetch_array($orderData);
                                         </tbody>
                                     </table>
                                     <hr>
-                                    <h4>Total Price: <span class="float-end fw-bold"><?= $data['total_price']; ?></span></h4>
+                                    <h4>الإجمالى: <span class=" fw-bold"><?= $data['total_price']; ?> جم</span></h4>
                                     <hr>
 
-                                    <label class="fw-bold">Payment Mode</label>
+                                    <label class="fw-bold">طريقة الدفع</label>
                                     <div class="border p-1 mb-3">
                                         <?= $data['payment_mode'] ?>
                                     </div>

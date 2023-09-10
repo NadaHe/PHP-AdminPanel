@@ -21,8 +21,8 @@ include('includes/header.php');
             ?>
 
             <div class="card">
-                <div class="card-header bg-primary">
-                    <h4>add category</h4>
+                <div class="card-header sidebarcolor">
+                    <h4 class="text-white">add category</h4>
                 </div>
                 <div class="card-body">
                     <form action="code.php" method="POST" enctype="multipart/form-data">
