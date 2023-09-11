@@ -21,15 +21,15 @@ include('includes/header.php');
                 ?>
             </div>
             <div class="card">
-                <div class="card-header bg-primary">
-                    <h4>Products</h4>
+                <div class="card-header top">
+                    <h4 class="text-dark">المنتجات</h4>
                 </div>
-                <div class="card-body" id="products_table">
-                    <table class="table table-borded table-striped">
+                <div class="card-body text-center" id="products_table">
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
+                                <th>Product Name</th>
                                 <th>Image</th>
                                 <th>Status</th>
                                 <th>Edit</th>
@@ -51,7 +51,7 @@ include('includes/header.php');
                                         </td>
                                         <td><?= $item['status'] == '0' ? "visible" : "Hidden" ?></td>
                                         <td>
-                                            <a href="edit-product.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="edit-product.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-danger delete_product_btn" value="<?= $item['id']; ?>">Delete</button>

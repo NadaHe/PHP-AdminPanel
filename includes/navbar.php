@@ -27,7 +27,7 @@
                          <i class="fa-solid fa-user"></i>
                         </a>
                         <ul class="dropdown-menu bg-danger ">
-                            <li><a class="text-dark dropdown-item" href="my_orders.php">الاوردرات </a></li>
+                            <li><a class="text-dark dropdown-item" href="my_orders.php">الاوردرات</a></li>
                             <li><a class="text-dark dropdown-item" href="admin\index.php">لوحة التحكم</a></li>
                             <li><a class="text-dark dropdown-item" href="logout.php">تسجيل الخروج</a></li>
                         </ul>

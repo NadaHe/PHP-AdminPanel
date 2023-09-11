@@ -35,22 +35,17 @@
 <!-- =================================================================================================== -->
 
 <script src="assets/jquery-3.7.0.min.js"></script>
-<!-- <script src="assets/bootstrap-5.2.3-dist/js/bootstrap.bundle.js"></script> -->
 <script src="assets/bootstrap-5.3.1-dist/js/bootstrap.bundle.js"></script>
 
 <!-- Alertify js -->
 <script src="assets/Alertify js/alertify.min.js"></script>
 
 <script src="assets/js/custom.js"></script>
-<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/OwlCarousel2-2.3.4/dist/owl.carousel.min.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<!-- splide -->
-<script src="assets/splide-4.1.3/dist/js/splide.min.js"></script>
-<!-- MDB -->
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.1/mdb.min.js"></script> -->
 <script src="https://kit.fontawesome.com/b6954da99b.js" crossorigin="anonymous"></script>
 
 <script>
@@ -66,45 +61,37 @@
   ?>
 </script>
 
-<!-- <script>
-  var splide = new Splide( '.splide', {
-  perPage: 3,
-  gap    : '2rem',
-  breakpoints: {
-    640: {
-      perPage: 2,
-      gap    : '.7rem',
-    },
-    480: {
-      perPage: 1,
-      gap    : '.7rem',
-    },
-  },
-} );
-
-splide.mount();
-</script> -->
-
-<script type="text/javascript">
+<script>
   $(document).ready(function() {
+    // $('.owl-carousel').owlCarousel({
+    //   items: 5,
+    //   loop: true,
+    //   autoplay: true,
+    //   autoplayTimeout: 3000,
+    //   autoplayHoverPause: true
+    // });
     $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      responsive: {
-        0: {
-          items: 1
+    loop:true,
+    margin:10,
+    nav:true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    autoplayHoverPause: true,
+    responsive:{
+        0:{
+            items:1
         },
-        600: {
-          items: 3
+        600:{
+            items:3
         },
-        1000: {
-          items: 5
+        1000:{
+            items:5
         }
-      }
-    });
+    }
+})
   });
 </script>
+
 
 </body>
 

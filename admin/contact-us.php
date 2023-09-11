@@ -22,11 +22,11 @@ include('includes/header.php');
                 ?>
             </div>
             <div class="card">
-                <div class="card-header bg-primary">
+                <div class="card-header top">
                     <h4>Messages</h4>
                 </div>
-                <div class="card-body" id="Messages_table">
-                    <table class="table table-bordered table-striped">
+                <div class="card-body text-center" id="Messages_table">
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -57,7 +57,7 @@ include('includes/header.php');
                                         </td>
                                         <td><?= $item['sent_at']; ?></td>
                                         <td>
-                                            <a href="reply.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-primary">Reply</a>
+                                            <a href="reply.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-info">Reply</a>
                                         </td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-danger delete_Message_btn" value="<?= $item['id']; ?>">Delete</button>

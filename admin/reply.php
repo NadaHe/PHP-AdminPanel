@@ -7,7 +7,7 @@ include('includes/header.php');
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-primary">
+                <div class="card-header top">
                     <h4>Reply</h4>
                 </div>
                 <div class="card-body" id="Messages_table">

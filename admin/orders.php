@@ -7,13 +7,13 @@ include('includes/header.php');
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-primary">
-                    <h4 class="text-white">Orders
+                <div class="card-header top">
+                    <h4 class="text-dark">الطلبات
                         <a href="order-history.php" class="btn btn-warning float-start">Order history</a>
                     </h4>
                 </div>
-                <div class="card-body" id="">
-                    <table class="table table-bordered table-striped">
+                <div class="card-body text-center" id="">
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>ID</th>
@@ -39,7 +39,7 @@ include('includes/header.php');
                                         <td><?= $item['total_price']; ?></td>
                                         <td><?= $item['created_at']; ?></td>
                                         <td>
-                                            <a href="view-order.php?t=<?= $item['tracking_no']; ?>" class="btn btn-primary">View details</a>
+                                            <a href="view-order.php?t=<?= $item['tracking_no']; ?>" class="btn top">View details</a>
                                         </td>
                                     </tr>
                                 <?php

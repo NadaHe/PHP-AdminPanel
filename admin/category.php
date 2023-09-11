@@ -22,15 +22,15 @@ include('includes/header.php');
                 ?>
             </div>
             <div class="card">
-                <div class="card-header  bg-primary">
-                    <h4>Categories</h4>
+                <div class="card-header top">
+                    <h4 class="text-dark">التصنيفات</h4>
                 </div>
-                <div class="card-body" id="category_table">
-                    <table class="table table-bordered table-striped">
+                <div class="card-body text-center" id="category_table">
+                    <table class="table table-bordered ">
                         <thead>
                             <tr>
                                 <th>ID</th>
-                                <th>Name</th>
+                                <th>Category Name</th>
                                 <th>Image</th>
                                 <th>Status</th>
                                 <th>Edit</th>
@@ -52,7 +52,7 @@ include('includes/header.php');
                                         </td>
                                         <td><?= $item['status'] == '0' ? "visible" : "Hidden" ?></td>
                                         <td>
-                                            <a href="edit-category.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-primary">Edit</a>
+                                            <a href="edit-category.php?id=<?= $item['id']; ?>" class="btn btn-sm btn-info">Edit</a>
                                         </td>
                                         <td>
                                             <!-- <form action="code.php" method="POST">

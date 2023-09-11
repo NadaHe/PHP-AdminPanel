@@ -1,8 +1,29 @@
-.sidebarcolor{
-background-color: rgb(168, 40, 40);
+* {
+  font-family: "Noto Kufi Arabic", sans-serif;
+  font-weight: 500;
+  font-size: medium;
+  color: black;
+}
+.sidebarcolor {
+  background-color:#146C94;
+}
+.top{
+    background-color: #B0DAFF;
+}
+.top-text{
+    color: #19A7CE;
+}
+.selected {
+  background-color: rgb(5, 17, 68);
+  color: white;
 }
 
-.selected{
-    background-color: rgb(5, 17, 68);
-    color: white;
+.bton{
+    background-color: #a0d0fa;
+}
+.bton:hover{
+    background-color: #FEFF86;
+}
+.view{
+    background-color: #64CCC5;
 }

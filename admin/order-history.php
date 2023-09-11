@@ -7,8 +7,8 @@ include('includes/header.php');
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-primary">
-                    <h4 class="text-white">Order History
+                <div class="card-header top">
+                    <h4 class="text-dark">Order History
                         <a href="orders.php" class="btn btn-light float-start">Back</a>
                     </h4>
                 </div>

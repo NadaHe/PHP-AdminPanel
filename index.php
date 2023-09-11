@@ -72,8 +72,9 @@ include('includes/slider.php');
   </div>
 </div>
 
+
 <div class=" text-center">
-  <img src="images/MyProject (1).png" width="1500px" height="400px" class="img-fluid" alt="..." >
+  <img src="images/MyProject (1).png" width="1500px" height="400px" class="img-fluid" alt="...">
 </div>
 
 <!-- <i data-mdb-toggle="animation" data-mdb-animation-reset="true" data-mdb-animation="slide-out-right" class="fas fa-car-side fa-3x"></i> -->
@@ -299,7 +300,7 @@ include('includes/slider.php');
 </div>
 
 <div class=" text-center">
-  <img src="images/MyProject (1).png"  class="img-fluid" alt="..." >
+  <img src="images/MyProject (1).png" class="img-fluid" alt="...">
 </div>
 
 <!-- <div class="splide">
@@ -525,25 +526,4 @@ include('includes/slider.php');
 </div>
 
 <?php include('includes/footer.php'); ?>
-<script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
-
-<!-- <script type="text/javascript">
-  $(document).ready(function() {
-    $('.owl-carousel').owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: true,
-      responsive: {
-        0: {
-          items: 1
-        },
-        600: {
-          items: 3
-        },
-        1000: {
-          items: 5
-        }
-      }
-    });
-  });
-</script> -->
+<!-- <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script> -->

@@ -6,13 +6,13 @@ include('includes/header.php');
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-primary">
-                    <h4 class="text-white">Users
+                <div class="card-header top">
+                    <h4 class="text-dark">Users
                         <a href="admins.php" class="btn btn-warning float-start">Admins</a> 
                     </h4>
                 </div>
-                <div class="card-body">
-                    <table class="table table-bordered table-striped">
+                <div class="card-body text-center">
+                    <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>User_ID</th>

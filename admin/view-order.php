@@ -25,8 +25,8 @@ $data = mysqli_fetch_array($orderData);
     <div class="row">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header bg-primary">
-                    <span class="text-white fs-4"> View Order</span>
+                <div class="card-header top">
+                    <span class=" fs-4"> View Order</span>
                     <a href="orders.php" class="btn btn-warning float-start"><i class="fa fa-reply"></i> Back</a>
                 </div>
                 <div class="card-body">
@@ -112,7 +112,7 @@ $data = mysqli_fetch_array($orderData);
                                 </tbody>
                             </table>
                             <hr>
-                            <h4>Total Price: <span class="float-end fw-bold"><?= $data['total_price']; ?></span></h4>
+                            <h4>الإجمالى : <span class="fw-bold"><?= $data['total_price']; ?>جم </span></h4>
                             <hr>
 
                             <label class="fw-bold">Payment Mode</label>
@@ -129,7 +129,7 @@ $data = mysqli_fetch_array($orderData);
                                         <option value="1" <?= $data['status'] == 1 ? "selected" : "" ?>>Completed</option>
                                         <option value="2" <?= $data['status'] == 2 ? "selected" : "" ?>>Cancelled</option>
                                     </select>
-                                    <button type="submit" name="update_order_btn" class="btn btn-primary mt-4">Update status</button>
+                                    <button type="submit" name="update_order_btn" class="btn btn-warning mt-4">Update status</button>
                                 </form>
                             </div>
                         </div>
