@@ -69,7 +69,7 @@ include('includes/header.php');
                                         <textarea rows="3" name="meta_keywords" class="form-control mb-3" placeholder="Enter meta keywords"><?= $data['meta_keywords'] ?></textarea>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="" class="fw-bold h5">Status</label>
+                                        <label for="" class="fw-bold h5">غير متاح</label>
                                         <input type="checkbox" <?= $data['status'] ? "checked" : "" ?> name="status">
                                     </div>
                                     <div class="col-md-6">

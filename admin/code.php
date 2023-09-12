@@ -220,7 +220,7 @@ else if(isset($_POST['update_order_btn']))
     $track_no=$_POST['tracking_no'];
     $order_status=$_POST['order_status'];
 
-    $updateOrder_query="UPDATE orders set order_status='$order_status' where tracking_no='$track_no'";
+    $updateOrder_query="UPDATE orders set status='$order_status' where tracking_no='$track_no'";
     $updateOrder_query_run=mysqli_query($con,$updateOrder_query);
     
     redirect("view-order.php? t=$track_no","Order status updated successfully");

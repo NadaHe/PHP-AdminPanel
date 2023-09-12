@@ -28,7 +28,7 @@
 </div>
 <div class="py-2 bg-danger">
   <div class="text-center">
-    <p class="mb-0 text-white">جميع الحقوق محفوظة لشركة @ إلكترينو - <?= date('Y') ?></p>
+    <p class="mb-0 text-white">جميع الحقوق محفوظة لشركة @ إلكتريتو - <?= date('Y') ?></p>
   </div>
 </div>
 

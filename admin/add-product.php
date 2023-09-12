@@ -10,8 +10,8 @@ include('includes/header.php');
             if (isset($_SESSION['message'])) {
             ?>
 
-                <div class="alert alert-dismissible fade show bg-info text-white" role="alert">
-                    <strong>Hey!</strong> <?= $_SESSION['message'] ?>
+                <div class="alert alert-dismissible fade show bg-warning text-center text-white" role="alert">
+                    <strong class="text-white">Hey!</strong> <?= $_SESSION['message'] ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
@@ -19,6 +19,7 @@ include('includes/header.php');
                 unset($_SESSION['message']);
             }
             ?>
+            <!-- /////////////////////////////////////////////////////// -->
 
             <div class="card">
                 <div class="card-header top">
@@ -48,7 +49,7 @@ include('includes/header.php');
                             </div>
                             <div class="col-md-12">
                                 <label for="" class="fw-bold h5">اسم المنتج</label>
-                                <input type="text" required name="name" class="form-control mb-3" placeholder="Enter name" >
+                                <input type="text" required name="name" class="form-control mb-3" placeholder="Enter name">
                             </div>
                             <div class="col-md-12">
                                 <label for="" class="fw-bold h5">الماركة</label>
@@ -80,7 +81,7 @@ include('includes/header.php');
                                     <input type="number" name="qty" class="form-control mb-3" placeholder="Enter the Quantity">
                                 </div>
                                 <div class="col-md-3">
-                                    <label for="" class="fw-bold h5">Status</label> <br>
+                                    <label for="" class="fw-bold h5">غير متاح</label> <br>
                                     <input type="checkbox" name="status">
                                 </div>
                                 <div class="col-md-3">
@@ -97,7 +98,7 @@ include('includes/header.php');
                                 <textarea rows="3" name="meta_description" class="form-control mb-3" placeholder="Enter meta description"></textarea>
                             </div>
                             <div class="col-md-12">
-                                <label for=""class="fw-bold h5">Meta keywords</label>
+                                <label for="" class="fw-bold h5">Meta keywords</label>
                                 <textarea rows="3" name="meta_keywords" class="form-control mb-3" placeholder="Enter meta keywords"></textarea>
                             </div>
 

@@ -94,7 +94,7 @@ include('includes/header.php');
                                             <input type="number" name="qty" value="<?= $data['qty']; ?>" class="form-control mb-3" placeholder="Enter the Quantity">
                                         </div>
                                         <div class="col-md-3">
-                                            <label for="" class="fw-bold h5">Status</label> <br>
+                                            <label for="" class="fw-bold h5">غير متاح</label> <br>
                                             <input type="checkbox" name="status" <?= $data['status'] == '0' ? '' : 'checked' ?>>
                                         </div>
                                         <div class="col-md-3">

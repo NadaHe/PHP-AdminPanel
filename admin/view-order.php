@@ -24,10 +24,24 @@ $data = mysqli_fetch_array($orderData);
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+        <?php
+            if (isset($_SESSION['message'])) {
+            ?>
+
+                <div class="alert alert-dismissible fade show bg-warning text-center text-white" role="alert">
+                    <strong class="text-white">Hey!</strong> <?= $_SESSION['message'] ?>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+            <?php
+                unset($_SESSION['message']);
+            }
+            ?>
+            <!-- /////////////////////////////////////////////////////// -->
             <div class="card">
                 <div class="card-header top">
                     <span class=" fs-4"> View Order</span>
-                    <a href="orders.php" class="btn btn-warning float-start"><i class="fa fa-reply"></i> Back</a>
+                    <a href="orders.php" class="btn btn-warning float-start"> Back   <i class="fa fa-reply text-white"></i></a>
                 </div>
                 <div class="card-body">
                     <div class="row">

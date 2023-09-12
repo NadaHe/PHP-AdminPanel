@@ -33,10 +33,7 @@ include('includes/header.php');
           <label for="inputEmail4" class="form-label">الاسم</label>
           <input type="text" name="name" class="form-control" id="inputEmail4" required>
         </div>
-        <div class="col-12">
-          <label for="inputAddress" class="form-label">ارفق ملف</label>
-          <input type="file" name="file" class="form-control" id="inputAddress" required>
-        </div>
+       
         <div class="col-12">
           <label for="inputAddress" class="form-label">البريد الالكترونى </label>
           <input type="email" name="email" class="form-control" id="inputAddress" required>
@@ -48,6 +45,10 @@ include('includes/header.php');
         <div class="col-md-6">
           <label for="inputCity" class="form-label">رقم الهاتف</label>
           <input type="text" name="phone" class="form-control" id="inputCity" required>
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">ارفق ملف</label>
+          <input type="file" name="file" class="form-control" id="inputAddress" required>
         </div>
         <div class="col-12 float-start">
           <button type="submit" name="contact-btn" class="btn btn-danger mt-3">إرسال</button>

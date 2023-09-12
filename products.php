@@ -38,7 +38,7 @@ if (isset($_GET['category'])) {
                                     <li class="breadcrumb-item active" aria-current="page"><?= $category['name']; ?></li>
                                 </ol>
                             </nav>
-                        <h1><?= $category['name']; ?></h1>
+                        <h3><?= $category['name']; ?></h3>
                         <hr>
                         <div class="row">
                             <?php

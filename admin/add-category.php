@@ -10,8 +10,8 @@ include('includes/header.php');
             if (isset($_SESSION['message'])) {
             ?>
 
-                <div class="alert alert-dismissible fade show bg-info text-white" role="alert">
-                    <strong>Hey!</strong> <?= $_SESSION['message'] ?>
+                <div class="alert alert-dismissible fade show bg-warning text-center text-white" role="alert">
+                    <strong class="text-white">Hey!</strong> <?= $_SESSION['message'] ?>
                     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>
 
@@ -19,6 +19,7 @@ include('includes/header.php');
                 unset($_SESSION['message']);
             }
             ?>
+            <!-- /////////////////////////////////////////////////////// -->
 
             <div class="card">
                 <div class="card-header top">
@@ -56,7 +57,7 @@ include('includes/header.php');
                                 <textarea rows="3" name="meta_keywords" class="form-control mb-3" placeholder="Enter meta keywords"></textarea>
                             </div>
                             <div class="col-md-6">
-                                <label for="" class="fw-bold h5">Status</label>
+                                <label for="" class="fw-bold h5">غير متاح</label>
                                 <input type="checkbox" name="status">
                             </div>
                             <div class="col-md-6">
